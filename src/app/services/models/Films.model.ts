@@ -5,6 +5,7 @@ export interface Film {
     episode_id: number;
     director: string;
     release_date: string;
+    opening_crawl: string;
 
     // eslint-disable-next-line eol-last
 }

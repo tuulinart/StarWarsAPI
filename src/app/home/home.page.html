@@ -1,52 +1,53 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>Star WarsApi</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content>
-  <ion-list *ngIf="length === 0; then thenBlock ; else elseBlock">
-  </ion-list>
-  <ng-template #thenBlock>
-    <ion-item *ngFor="let item of [0, 1, 2, 3, 4, 5, 6,]">
-      <ion-avatar slot="start">
-        <ion-skeleton-text animated></ion-skeleton-text>
-      </ion-avatar>
-      <ion-label>
-        <h3>
-          <ion-skeleton-text animated style="width: 50%"></ion-skeleton-text>
-        </h3>
-        <p>
-          <ion-skeleton-text animated style="width: 80%"></ion-skeleton-text>
-        </p>
-        <p>
-          <ion-skeleton-text animated style="width: 30%"></ion-skeleton-text>
-        </p>
-      </ion-label>
-    </ion-item>
-  </ng-template>
-
-  <ng-template #elseBlock>
-    <ion-list>
-      <ion-item-sliding *ngFor="let film of results">
-        <ion-item button (click)="filmPage()">
-          <ion-avatar slot="start">
-            <img
-              src='https://cdn2.unrealengine.com/egs-starwarsbattlefrontiicelebrationedition-dice-g1a-01-1920x1080-87971829e831.jpg'>
-          </ion-avatar>
-
-          <ion-label>
-            {{ film.title }}
-            <p>{{ film.director }}</p>
-            <p>{{ film.opening_crawl }}</p>
-          </ion-label>
-
-          <ion-note color="primary" slot="end">{{film.release_date}}</ion-note>
-        </ion-item>
-
-        <ion-item-options side="end">
-        </ion-item-options>
-      </ion-item-sliding>
+<body style="padding: 10px; background-image: url(https://cdn.pixabay.com/photo/2016/01/27/15/25/space-1164579_960_720.png)">
+  <ion-header>
+    <ion-toolbar style="padding-bottom: 10px; padding-top: 10px;">
+      <ion-title><img src="https://assets.webiconspng.com/uploads/2017/09/Star-Wars-PNG-Image-76646.png" width="80"></ion-title>
+      <ion-note slot="end" style="padding-right: 5px;">
+      </ion-note>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list *ngIf="length === 0; then thenBlock ; else elseBlock">
     </ion-list>
-  </ng-template>
-</ion-content>
+    <ng-template #thenBlock>
+      <ion-item *ngFor="let item of [0, 1, 2, 3, 4, 5, 6,]">
+        <ion-avatar slot="start">
+          <ion-skeleton-text animated></ion-skeleton-text>
+        </ion-avatar>
+        <ion-label>
+          <h3>
+            <ion-skeleton-text animated style="width: 50%"></ion-skeleton-text>
+          </h3>
+          <p>
+            <ion-skeleton-text animated style="width: 80%"></ion-skeleton-text>
+          </p>
+          <p>
+            <ion-skeleton-text animated style="width: 30%"></ion-skeleton-text>
+          </p>
+        </ion-label>
+      </ion-item>
+    </ng-template>
+
+    <ng-template #elseBlock>
+      <ion-list>
+        <ion-item-sliding *ngFor="let film of results" style="padding-bottom: 20px;">
+          <ion-item button (click)="filmPage(film)">
+            <ion-avatar slot="start">
+              <img [attr.src]="imgsUrls(film.episode_id).url" >
+            </ion-avatar>
+
+            <ion-label>
+              <b>{{ film.title }}</b>
+              <p><i>Director: {{ film.director }}</i></p>
+            </ion-label>
+
+            <ion-note color="warning" slot="end">
+              Debuted in<br>{{film.release_date}}
+            </ion-note>
+          </ion-item>
+        </ion-item-sliding>
+      </ion-list>
+    </ng-template>
+  </ion-content>
+
+</body>

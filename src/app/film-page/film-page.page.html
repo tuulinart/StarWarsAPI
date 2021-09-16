@@ -1,19 +1,32 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>film-page</ion-title>
+    <ion-title class="ion-title" slot="end"><b>{{film.title}}</b></ion-title>
+    <ion-note slot="start">
+      <a href ="/"><img src="https://assets.webiconspng.com/uploads/2017/09/Star-Wars-PNG-Image-76646.png" width="80" style="padding-left: 20px;"></a>
+    </ion-note>
   </ion-toolbar>
 </ion-header>
 
-<ion-content color="light">
+<ion-content>
 
-  <ion-card-header>
-    <ion-card-title>{{film.title}}</ion-card-title>
-    <ion-card-subtitle>{{film.director}}</ion-card-subtitle>
+  <ion-card-header class="container">
+  <img [attr.src]="imgsUrls(film.episode_id).url" width="500" height="500">
   </ion-card-header>
 
-  <ion-card-content>
-    {{film.opening_crawl}}
+  <ion-card-content style="padding-top: 10px;">
+    <ion-card-title color="warning">
+      {{film.title}}
+    </ion-card-title>
+    <ion-note color="warning" slot="start">
+      Debuted in &nbsp;{{film.release_date}}
+    </ion-note>
+    <ion-card-subtitle><i>{{film.director}}</i></ion-card-subtitle>
+    <ion-note color="secondary">
+      <p>{{film.opening_crawl}}</p>
+    </ion-note>
+    <br>
+    <br>
+    <button class="btn"> <a href="https://www.filmelier.com/br/list/onde-assistir-aos-filmes-de-star-wars" target="_blank" class="ahref">Watch</a></button>
   </ion-card-content>
-
-
 </ion-content>
+
