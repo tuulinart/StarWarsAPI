@@ -48,7 +48,6 @@ export class HomePage {
   filmPage(film: Film) {
     this.dataService.dataSave('film', film);
     this.route.navigateByUrl('film-page');
-    console.log(film);
   }
 
 //Função para percorrer o array listImgs e encontrar o respectivo id do filme.
@@ -63,7 +62,6 @@ export class HomePage {
       this.listaFilms = data;
       length = this.listaFilms.results.length;
       this.results = this.listaFilms.results;
-      console.log(length);
     });
   }
   /*  ngOnInit() {

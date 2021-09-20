@@ -8,7 +8,7 @@
 </ion-header>
 <ion-content>
   <ion-card-header class="container">
-  <img [attr.src]="imgsUrls(film.episode_id).url" width="500" height="500">
+  <img [attr.src]="imgsUrls(film.episode_id).url" style="width: 500; height: 500;">
   </ion-card-header>
 
   <ion-card-content style="padding-top: 10px;">
@@ -22,22 +22,30 @@
     <ion-note color="secondary">
       <p>{{film.opening_crawl}}</p>
     </ion-note>
-    <h2 style="padding-top: 10px;">Characters</h2>
-    <swiper *ngFor="let char of results" #swiper [config] = "config">
-      <ng-template swiperSlide>
-      <ion-card>
-        {{char.name}}
-      </ion-card>
-      </ng-template>
-
-    </swiper>
-
+    <br>
+    <h2 style="padding-top: 10px;"><b>Characters</b></h2>
+    <ion-slides [options]="slideOpts">
+      <ion-slide *ngFor="let char of results">
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title color="warning">
+              {{char.name}}
+            </ion-card-title>
+            <br>
+            <ion-card-subtitle color="secondary" style="text-transform: uppercase;">
+              GENDER: &nbsp;{{char.gender}}.
+            </ion-card-subtitle>
+            <ion-note color="secondary">
+              <i>BIRTH YEAR: &nbsp;{{char.birth_year}}</i>
+            </ion-note>
+          </ion-card-header>
+          <ion-card-content>
+            <img [attr.src]="ImgChar(char.name)" style="width: 100%; height: 350px; object-fit: cover;">
+          </ion-card-content>
+        </ion-card>
+      </ion-slide>
+    </ion-slides>
   <ion-icon name="play" (click)="openWebPage(film.episode_id)" class="ion-icon"></ion-icon>
-  <div>
-
-  </div>
+  <br>
   </ion-card-content>
-  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id eius ad vitae dolor quo esse pariatur voluptatem inventore, ullam eaque aliquam, officia similique blanditiis facilis perferendis, velit quibusdam culpa quam?</p>
 </ion-content>
-
-
