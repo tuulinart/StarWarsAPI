@@ -1,9 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component} from '@angular/core';
 import { Router } from '@angular/router';
 import { ApiService } from '../services/api.service';
 import { Film, ListFilm } from '../services/models/Films.model';
 import { TempDataService } from '../services/temp-data.service';
-import { NativeAudio } from '@ionic-native/native-audio/ngx';
 
 @Component({
   selector: 'app-home',
@@ -23,10 +22,8 @@ export class HomePage {
 //Variavel para pegar o tamanho do dados.
   public length: any;
 
-
 //Array de fotos de capa do filme.
   public listImgs: Array<any> = [
-  //eslint-disable @typescript-eslint/naming-convention
   {id: 4 ,url: 'https://m.media-amazon.com/images/I/51c6S4kGFmL.jpg',},
   {id: 5, url: 'https://images-na.ssl-images-amazon.com/images/I/91zz3a+YJ-L.jpg',},
   {id: 6, url: 'https://images-na.ssl-images-amazon.com/images/I/81g8vEs4ixL.jpg',},
@@ -34,7 +31,6 @@ export class HomePage {
 },
   {id: 2, url: 'https://upload.wikimedia.org/wikipedia/en/3/32/Star_Wars_-_Episode_II_Attack_of_the_Clones_%28movie_poster%29.jpg',},
   {id: 3,url: 'https://i.pinimg.com/474x/e5/57/6a/e5576a1966329ef7e28554b8cea80841.jpg',}
-  // eslint-disable-next-line-max-len
    ];
 
 
@@ -44,7 +40,6 @@ export class HomePage {
     private apiService: ApiService,
     public route: Router,
     public dataService: TempDataService,
-    public nativeAuido: NativeAudio
   ) {
     this.listFilms();
   }

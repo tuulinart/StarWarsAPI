@@ -23,7 +23,18 @@
   cursor: pointer;
   transition: background 0.3s;
 }
+.ion-icon {
+  font-size: 50px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
 
 .btn:hover {
   background-color: #0f4d69;
+}
+
+.ion-title {
+  margin: 0 auto;
 }

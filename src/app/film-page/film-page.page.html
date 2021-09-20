@@ -1,14 +1,12 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title class="ion-title" slot="end"><b>{{film.title}}</b></ion-title>
+    <ion-title class="ion-title"><b>{{film.title}}</b></ion-title>
     <ion-note slot="start">
       <a href ="/"><img src="https://assets.webiconspng.com/uploads/2017/09/Star-Wars-PNG-Image-76646.png" width="80" style="padding-left: 20px;"></a>
     </ion-note>
   </ion-toolbar>
 </ion-header>
-
 <ion-content>
-
   <ion-card-header class="container">
   <img [attr.src]="imgsUrls(film.episode_id).url" width="500" height="500">
   </ion-card-header>
@@ -24,9 +22,22 @@
     <ion-note color="secondary">
       <p>{{film.opening_crawl}}</p>
     </ion-note>
-    <br>
-    <br>
-    <button class="btn"> <a href="https://www.filmelier.com/br/list/onde-assistir-aos-filmes-de-star-wars" target="_blank" class="ahref">Watch</a></button>
+    <h2 style="padding-top: 10px;">Characters</h2>
+    <swiper *ngFor="let char of results" #swiper [config] = "config">
+      <ng-template swiperSlide>
+      <ion-card>
+        {{char.name}}
+      </ion-card>
+      </ng-template>
+
+    </swiper>
+
+  <ion-icon name="play" (click)="openWebPage(film.episode_id)" class="ion-icon"></ion-icon>
+  <div>
+
+  </div>
   </ion-card-content>
+  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id eius ad vitae dolor quo esse pariatur voluptatem inventore, ullam eaque aliquam, officia similique blanditiis facilis perferendis, velit quibusdam culpa quam?</p>
 </ion-content>
+
 

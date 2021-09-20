@@ -1,4 +1,4 @@
-<body style="padding: 10px; background-image: url(https://cdn.pixabay.com/photo/2016/01/27/15/25/space-1164579_960_720.png)">
+<body style="padding: 10px;background-image: url(https://cdn.pixabay.com/photo/2016/01/27/15/25/space-1164579_960_720.png)">
   <ion-header>
     <ion-toolbar style="padding-bottom: 10px; padding-top: 10px;">
       <ion-title><img src="https://assets.webiconspng.com/uploads/2017/09/Star-Wars-PNG-Image-76646.png" width="80"></ion-title>
@@ -7,10 +7,10 @@
     </ion-toolbar>
   </ion-header>
   <ion-content>
-    <ion-list *ngIf="length === 0; then thenBlock ; else elseBlock">
+    <ion-list *ngIf="length === 0; then thenBlock  ; else  elseBlock">
     </ion-list>
     <ng-template #thenBlock>
-      <ion-item *ngFor="let item of [0, 1, 2, 3, 4, 5, 6,]">
+      <ion-item *ngFor="let item of [0, 1, 2, 3, 4, 5, 6, 7]">
         <ion-avatar slot="start">
           <ion-skeleton-text animated></ion-skeleton-text>
         </ion-avatar>
