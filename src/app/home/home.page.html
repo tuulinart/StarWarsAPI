@@ -1,10 +1,10 @@
 <body style="padding: 10px;background-image: url(https://cdn.pixabay.com/photo/2016/01/27/15/25/space-1164579_960_720.png)">
-  <ion-header class="ion-haeder">
-    <ion-toolbar style="padding-bottom: 10px; padding-top: 10px; background-color: red;">
+  <ion-header class="ion-header">
+    <ion-toolbar style="padding-bottom: 10px; padding-top: 10px;" color='dark'>
       <ion-title><img src="https://assets.webiconspng.com/uploads/2017/09/Star-Wars-PNG-Image-76646.png" width="80"></ion-title>
     </ion-toolbar>
   </ion-header>
-  <ion-content>
+  <ion-content color='medium'>
     <ion-list *ngIf="length === 0; then thenBlock  ; else  elseBlock">
     </ion-list>
     <ng-template #thenBlock>
@@ -27,9 +27,9 @@
     </ng-template>
 
     <ng-template #elseBlock>
-      <ion-list>
-        <ion-item-sliding *ngFor="let film of results" style="padding-bottom: 20px;">
-          <ion-item button (click)="filmPage(film)">
+      <ion-list inset = true style="background-color: #1c1d20">
+        <ion-item-sliding *ngFor="let film of results" style="padding-bottom: 15px;">
+          <ion-item button (click)="filmPage(film)" color='dark'>
             <ion-avatar slot="start">
               <img [attr.src]="imgsUrls(film.episode_id).url" >
             </ion-avatar>

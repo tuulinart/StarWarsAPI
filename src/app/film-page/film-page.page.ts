@@ -127,7 +127,7 @@ export class FilmPagePage implements OnInit {
     return img;
   }
   case "Owen Lars": {
-    const img = "https://i.pinimg.com/originals/32/33/53/323353d1d14345f7bba31a4f500d136b.png";
+    const img = "https://pm1.narvii.com/6814/7fa7d8116cfc3f53a578dff10465bf44daf31e3av2_hq.jpg";
     return img;
   }
   case "Beru Whitesun lars": {
@@ -159,7 +159,7 @@ export class FilmPagePage implements OnInit {
     return img;
   }
   case "Greedo": {
-    const img = "https://i.pinimg.com/564x/aa/61/f2/aa61f2d626f0bc5b755b5e4209d2271c.jpg";
+    const img = "https://pbs.twimg.com/profile_images/719705738763841537/sdrofuoV_400x400.jpg";
     return img;
   }
   case "Jabba Desilijic Tiure": {
@@ -175,7 +175,7 @@ export class FilmPagePage implements OnInit {
     return img;
   }
   case "Raymus Antilles": {
-    const img = "https://i.pinimg.com/originals/ea/d1/25/ead1250106b60318cf6276934e6b70a7.jpg";
+    const img = "https://pbs.twimg.com/media/EV9u8sRXsAEltI5.jpg";
     return img;
   }
   case "Yoda": {
@@ -247,7 +247,7 @@ export class FilmPagePage implements OnInit {
     return img;
   }
   case "Padmé Amidala": {
-    const img = "https://lh3.googleusercontent.com/proxy/Prqnnj6Cl3LcuGi_fjHGzko6Qu9GLudEG5UyYc7V3IvjXbSBXnXbsQ7ozuIeDqYPwMNYFCf3XUIcro61FBK95gXfviO9-rjTwPYDoMhEc8xHyKRWMQljfoL_gtYR8v0suSeWXJMpUf8r";
+    const img = "https://i.pinimg.com/originals/f5/c5/52/f5c55259fef1a791cafa41d028e6d9de.jpg";
     return img;
   }
   case "Jar Jar Binks": {
@@ -323,11 +323,11 @@ export class FilmPagePage implements OnInit {
     return img;
   }
   case "Adi Gallia": {
-    const img = "https://i.pinimg.com/originals/cd/65/f7/cd65f777b63f3a579385944c9e9fbd81.jpg";
+    const img = "https://sm.ign.com/ign_br/screenshot/a/adi-gallia/adi-gallia-is-a-female-jedi-master-of-the-tholothian-species_sy33.jpg";
     return img;
   }
   case "Saesee Tiin": {
-    const img = "http://4.bp.blogspot.com/_Ql-01uFvGJM/TJAe7QjEhoI/AAAAAAAACLI/9wrBZ4tSeGc/s1600/saesee_face2.jpg";
+    const img = "https://vignette.wikia.nocookie.net/starwars/images/6/68/Saesee_Tiin_Card_Trader.jpg";
     return img;
   }
   case "Yarael Poof": {
@@ -355,7 +355,7 @@ export class FilmPagePage implements OnInit {
     return img;
   }
   case "Luminara Unduli": {
-    const img = "https://i.pinimg.com/474x/ed/63/0c/ed630cd3e35d911e33abe30fdddedee3--comic-con-costumes-star-wars-costumes.jpg";
+    const img = "https://i.redd.it/hgs0r59p0ef11.jpg";
     return img;
   }
   case "Barriss Offee": {

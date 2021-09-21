@@ -1,12 +1,12 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color='dark'>
     <ion-title class="ion-title"><b>{{film.title}}</b></ion-title>
     <ion-note slot="start">
       <a href ="/"><img src="https://assets.webiconspng.com/uploads/2017/09/Star-Wars-PNG-Image-76646.png" width="80" style="padding-left: 20px;"></a>
     </ion-note>
   </ion-toolbar>
 </ion-header>
-<ion-content>
+<ion-content color='medium'>
   <ion-card-header class="container">
   <img [attr.src]="imgsUrls(film.episode_id).url" style="width: 500; height: 500;">
   </ion-card-header>
@@ -18,21 +18,21 @@
     <ion-note color="warning" slot="start">
       Debuted in &nbsp;{{film.release_date}}
     </ion-note>
-    <ion-card-subtitle><i>{{film.director}}</i></ion-card-subtitle>
+    <ion-card-subtitle style="color: white;"><i>{{film.director}}</i></ion-card-subtitle>
     <ion-note color="secondary">
       <p>{{film.opening_crawl}}</p>
     </ion-note>
     <br>
     <h2 style="padding-top: 10px;"><b>Characters</b></h2>
-    <ion-slides [options]="slideOpts">
+    <ion-slides [options]="slideOpts" >
       <ion-slide *ngFor="let char of results">
-        <ion-card>
+        <ion-card color='dark'>
           <ion-card-header>
-            <ion-card-title color="warning">
-              {{char.name}}
+            <ion-card-title style="color: #ffc409;">
+              <b>{{char.name}}</b>
             </ion-card-title>
             <br>
-            <ion-card-subtitle color="secondary" style="text-transform: uppercase;">
+            <ion-card-subtitle style="text-transform: uppercase; color: #3dc2ff;">
               GENDER: &nbsp;{{char.gender}}.
             </ion-card-subtitle>
             <ion-note color="secondary">
@@ -40,11 +40,12 @@
             </ion-note>
           </ion-card-header>
           <ion-card-content>
-            <img [attr.src]="ImgChar(char.name)" style="width: 100%; height: 350px; object-fit: cover;">
+            <img [attr.src]="ImgChar(char.name)" style="width: 100%; height: 400px; object-fit: cover;">
           </ion-card-content>
         </ion-card>
       </ion-slide>
     </ion-slides>
+    <br>
   <ion-icon name="play" (click)="openWebPage(film.episode_id)" class="ion-icon"></ion-icon>
   <br>
   </ion-card-content>
